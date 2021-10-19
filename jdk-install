@@ -1,0 +1,27 @@
+Download:
+OracleJDK https://www.oracle.com/java/technolog...
+or
+Liberica OpenJDK https://bell-sw.com 
+--------
+java -version
+javac -version  
+echo $JAVA_HOME  
+--------
+touch .zshrc
+open -e .zshrc 
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+("or":
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/adoptopenjdk-13.jdk/Contents/Home'
+export PATH=$JAVA_HOME/bin:$PATH
+
+"To switch to a different version, change":
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home'
+export PATH=$JAVA_HOME/bin:$PATH
+
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk-14.0.2.jdk/Contents/Home'
+export PATH=$JAVA_HOME/bin:$PATH
+)
+
+source ~/.zshrc        #to run in the current shell
